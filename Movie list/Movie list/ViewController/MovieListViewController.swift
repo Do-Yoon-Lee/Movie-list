@@ -8,7 +8,10 @@
 import UIKit
 
 class MovieListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-  
+    let movieList: [Movie] = [
+        Movie(title: "제목1", rate: 1.2),
+        Movie(title: "제목2", rate: 1.3),
+        Movie(title: "제목3", rate: 1.4)]
     
  
     @IBOutlet weak var tableView: UITableView!
@@ -19,13 +22,15 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
         
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 100
+        return movieList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieCell
         print("\(indexPath.row)번쨰가 뿌려집니다.")
-        cell.titleLabel.text = "\(indexPath.row)번쨰 cell"
+        let movie = movieList[indexPath.row]
+        cell.titleLabel.text = movie.title
+        cell.rateLabel.text = "\(movie.rate)"
         return cell
         
     }
