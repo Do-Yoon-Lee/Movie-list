@@ -15,11 +15,11 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        label.text = "text"
+        //label.text = "text"
         // Do any additional setup after loading the view.
     }
     override func viewDidAppear(_ animated: Bool) {
-        label.text = "Hello"
+        //label.text = "Hello"
     }
     @IBAction func pressedButton(_ sender: Any) {
         print("Hello World!!!")

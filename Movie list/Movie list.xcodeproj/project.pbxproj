@@ -19,6 +19,7 @@
 		B93AA1D426FAD16C00AE3DC3 /* Movie_listUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93AA1D326FAD16C00AE3DC3 /* Movie_listUITestsLaunchTests.swift */; };
 		B93AA1E126FAD39E00AE3DC3 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93AA1E026FAD39E00AE3DC3 /* MovieListViewController.swift */; };
 		B93AA1E326FAD42500AE3DC3 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93AA1E226FAD42500AE3DC3 /* MovieDetailViewController.swift */; };
+		B980A6CC270DC11A00AAF757 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B980A6CB270DC11A00AAF757 /* MovieCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		B93AA1D326FAD16C00AE3DC3 /* Movie_listUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie_listUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B93AA1E026FAD39E00AE3DC3 /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
 		B93AA1E226FAD42500AE3DC3 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
+		B980A6CB270DC11A00AAF757 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			children = (
 				B93AA1E426FAD4F400AE3DC3 /* ViewController */,
 				B93AA1AD26FAD16B00AE3DC3 /* AppDelegate.swift */,
+				B980A6CB270DC11A00AAF757 /* MovieCell.swift */,
 				B93AA1AF26FAD16B00AE3DC3 /* SceneDelegate.swift */,
 				B93AA1B326FAD16B00AE3DC3 /* Main.storyboard */,
 				B93AA1B926FAD16C00AE3DC3 /* Assets.xcassets */,
@@ -275,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B980A6CC270DC11A00AAF757 /* MovieCell.swift in Sources */,
 				B93AA1B226FAD16B00AE3DC3 /* MainViewController.swift in Sources */,
 				B93AA1E126FAD39E00AE3DC3 /* MovieListViewController.swift in Sources */,
 				B93AA1AE26FAD16B00AE3DC3 /* AppDelegate.swift in Sources */,
