@@ -100,9 +100,37 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="et8-HR-be5" id="dhR-uy-Lfj">
                                             <rect key="frame" x="0.0" y="0.0" width="428" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avi-eq-A1J">
+                                                    <rect key="frame" x="20" y="11.333333333333336" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Chc-iZ-4tR">
+                                                    <rect key="frame" x="366" y="11.333333333333336" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Chc-iZ-4tR" firstAttribute="centerY" secondItem="dhR-uy-Lfj" secondAttribute="centerY" id="5Mt-5N-WWF"/>
+                                                <constraint firstItem="avi-eq-A1J" firstAttribute="leading" secondItem="dhR-uy-Lfj" secondAttribute="leading" constant="20" symbolic="YES" id="N0u-1k-ZC6"/>
+                                                <constraint firstAttribute="trailing" secondItem="Chc-iZ-4tR" secondAttribute="trailing" constant="20" symbolic="YES" id="OHo-Kf-unI"/>
+                                                <constraint firstItem="avi-eq-A1J" firstAttribute="centerY" secondItem="dhR-uy-Lfj" secondAttribute="centerY" id="oAW-sq-dc3"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="rateLabel" destination="Chc-iZ-4tR" id="6I7-hB-Z1a"/>
+                                            <outlet property="titleLabel" destination="avi-eq-A1J" id="kaj-Kv-vAP"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="QQT-xb-OoJ" id="JVq-fh-tHL"/>
+                                    <outlet property="delegate" destination="QQT-xb-OoJ" id="Hm0-tX-zA4"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zqa-Qj-Xg7"/>
@@ -120,7 +148,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cGn-kC-0pJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="745" y="80"/>
+            <point key="canvasLocation" x="744.3925233644859" y="79.697624190064801"/>
         </scene>
         <!--Movie Detail View Controller-->
         <scene sceneID="Sh3-gQ-j2V">
