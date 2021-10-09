@@ -31,7 +31,8 @@ class MainViewController: UIViewController {
         viewController.modalTransitionStyle = UIModalTransitionStyle.coverVertical
         
         //인자값으로 다음 뷰 컨트롤러를 넣고 present 메소드를 호출합니다.
-        self.present(viewController, animated: true)
+        //self.present(viewController, animated: true)
+        self.navigationController?.pushViewController(viewController, animated: true)
         
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){

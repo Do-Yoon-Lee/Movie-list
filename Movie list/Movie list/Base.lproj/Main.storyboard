@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hh3-do-lCC">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최소 평점을 입력하세요 (0 ~ 9)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bF-ro-pcZ">
-                                <rect key="frame" x="16" y="64" width="249" height="30"/>
+                                <rect key="frame" x="16" y="108" width="249" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="PaV-Qg-gIz"/>
                                 </constraints>
@@ -27,7 +27,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="(0 ~ 9)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kiE-D1-ZuF">
-                                <rect key="frame" x="16" y="114" width="396" height="30"/>
+                                <rect key="frame" x="16" y="158" width="396" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Y9a-Mm-5RT"/>
                                 </constraints>
@@ -72,6 +72,7 @@
                             <constraint firstItem="kiE-D1-ZuF" firstAttribute="top" secondItem="7bF-ro-pcZ" secondAttribute="bottom" constant="20" id="td3-Pd-grJ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Gig-cC-pgV"/>
                     <connections>
                         <outlet property="button" destination="7ga-ye-etd" id="E6d-TG-T4H"/>
                         <outlet property="label" destination="7bF-ro-pcZ" id="Usf-hI-6qF"/>
@@ -80,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="16.822429906542055" y="79.697624190064801"/>
+            <point key="canvasLocation" x="1816.8224299065419" y="79.697624190064801"/>
         </scene>
         <!--Movie List View Controller-->
         <scene sceneID="j5E-4p-ZVT">
@@ -148,7 +149,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cGn-kC-0pJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="744.3925233644859" y="79.697624190064801"/>
+            <point key="canvasLocation" x="2544.3925233644859" y="79.697624190064801"/>
         </scene>
         <!--Movie Detail View Controller-->
         <scene sceneID="Sh3-gQ-j2V">
@@ -163,7 +164,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lLe-bU-6hJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1455" y="80"/>
+            <point key="canvasLocation" x="3253.7383177570091" y="79.697624190064801"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UsS-9C-qbp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hh3-do-lCC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JZG-cg-zAN">
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="aKI-ZW-Fsp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c6X-oa-WrM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="916.82242990654197" y="79.697624190064801"/>
         </scene>
     </scenes>
     <resources>
