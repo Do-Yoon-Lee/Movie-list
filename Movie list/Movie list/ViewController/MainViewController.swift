@@ -15,12 +15,18 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //label.text = "text"
-        // Do any additional setup after loading the view.
+        
+        let url = "https://yts.lt/api/v2/list_movies.json"
+        
+        let apiURI: URL! = URL(string: url)
+        
+        let apiData = try! Data(contentsOf: apiURI) // Data와 URL타입 객체 모두 Foundation프레임 워크에서 제공하는 클래스
+        
+        let str = String(decoding: apiData, as: UTF8.self)
+        
+        print(str)
     }
-    override func viewDidAppear(_ animated: Bool) {
-        //label.text = "Hello"
-    }
+    
     @IBAction func pressedButton(_ sender: Any) {
         
         guard let viewController = self.storyboard?.instantiateViewController(withIdentifier: "MovieListViewController") else {
