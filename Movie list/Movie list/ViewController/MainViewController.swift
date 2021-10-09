@@ -22,8 +22,17 @@ class MainViewController: UIViewController {
         //label.text = "Hello"
     }
     @IBAction func pressedButton(_ sender: Any) {
-        print("Hello World!!!")
-    
+        
+        guard let viewController = self.storyboard?.instantiateViewController(withIdentifier: "MovieListViewController") else {
+            return
+        }
+        
+        //화면 전환 애니메이션을 설정합니다. coverVertical 외에도 다양한 옵션이 있습니다.
+        viewController.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+        
+        //인자값으로 다음 뷰 컨트롤러를 넣고 present 메소드를 호출합니다.
+        self.present(viewController, animated: true)
+        
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
           self.view.endEditing(true)
