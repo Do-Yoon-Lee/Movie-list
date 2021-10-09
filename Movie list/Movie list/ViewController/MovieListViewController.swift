@@ -9,9 +9,9 @@ import UIKit
 
 class MovieListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     let movieList: [Movie] = [
-        Movie(title: "제목1", rate: 1.2),
-        Movie(title: "제목2", rate: 1.3),
-        Movie(title: "제목3", rate: 1.4)]
+        Movie(title: "제목1", rating: 1.2),
+        Movie(title: "제목2", rating: 1.3),
+        Movie(title: "제목3", rating: 1.4)]
     
  
     @IBOutlet weak var tableView: UITableView!
@@ -30,7 +30,7 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
         print("\(indexPath.row)번쨰가 뿌려집니다.")
         let movie = movieList[indexPath.row]
         cell.titleLabel.text = movie.title
-        cell.rateLabel.text = "\(movie.rate)"
+        cell.rateLabel.text = "\(movie.rating)"
         return cell
         
     }

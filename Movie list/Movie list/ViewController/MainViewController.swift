@@ -16,30 +16,57 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = "https://yts.lt/api/v2/list_movies.json"
         
-        let apiURI: URL! = URL(string: url)
+    }
+   
+    func requestGet(url: String, completionHandler: @escaping (Bool, MovieResponse?) -> Void) {
+        guard let url = URL(string: url) else {
+            print("Error: cannot create URL")
+            return
+        }
         
-        let apiData = try! Data(contentsOf: apiURI) // Data와 URL타입 객체 모두 Foundation프레임 워크에서 제공하는 클래스
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
         
-        let str = String(decoding: apiData, as: UTF8.self)
-        
-        print(str)
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            guard error == nil else {
+                print("Error: error calling GET")
+                print(error!)
+                return
+            }
+            guard let data = data else {
+                print("Error: Did not receive data")
+                return
+            }
+            guard let response = response as? HTTPURLResponse, (200 ..< 300) ~= response.statusCode else {
+                print("Error: HTTP request failed")
+                return
+            }
+            guard let output = try? JSONDecoder().decode(MovieResponse.self, from: data) else {
+                print("Error: JSON Data Parsing failed")
+                return
+            }
+            
+            completionHandler(true, output)
+        }.resume()
     }
     
     @IBAction func pressedButton(_ sender: Any) {
         
-        guard let viewController = self.storyboard?.instantiateViewController(withIdentifier: "MovieListViewController") else {
-            return
+        let url = "https://yts.lt/api/v2/list_movies.json"
+        
+        requestGet(url: url) { result, movieResponse in
+            print(movieResponse)
         }
         
-        //화면 전환 애니메이션을 설정합니다. coverVertical 외에도 다양한 옵션이 있습니다.
-        viewController.modalTransitionStyle = UIModalTransitionStyle.coverVertical
-        
-        //인자값으로 다음 뷰 컨트롤러를 넣고 present 메소드를 호출합니다.
-        //self.present(viewController, animated: true)
-        self.navigationController?.pushViewController(viewController, animated: true)
-        
+//        guard let viewController = self.storyboard?.instantiateViewController(withIdentifier: "MovieListViewController") else {
+//            return
+//        }
+//
+//        //인자값으로 다음 뷰 컨트롤러를 넣고 present 메소드를 호출합니다.
+//        //self.present(viewController, animated: true)
+//        self.navigationController?.pushViewController(viewController, animated: true)
+//
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
           self.view.endEditing(true)

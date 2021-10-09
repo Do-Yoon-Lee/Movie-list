@@ -20,7 +20,7 @@
 		B93AA1E126FAD39E00AE3DC3 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93AA1E026FAD39E00AE3DC3 /* MovieListViewController.swift */; };
 		B93AA1E326FAD42500AE3DC3 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93AA1E226FAD42500AE3DC3 /* MovieDetailViewController.swift */; };
 		B980A6CC270DC11A00AAF757 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B980A6CB270DC11A00AAF757 /* MovieCell.swift */; };
-		B980A6CF270DCD6200AAF757 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = B980A6CE270DCD6200AAF757 /* Movie.swift */; };
+		B980A6D12711486C00AAF757 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B980A6D02711486C00AAF757 /* ResponseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +58,7 @@
 		B93AA1E026FAD39E00AE3DC3 /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
 		B93AA1E226FAD42500AE3DC3 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		B980A6CB270DC11A00AAF757 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
-		B980A6CE270DCD6200AAF757 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		B980A6D02711486C00AAF757 /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +153,7 @@
 		B980A6CD270DCD3E00AAF757 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B980A6CE270DCD6200AAF757 /* Movie.swift */,
+				B980A6D02711486C00AAF757 /* ResponseModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -290,12 +290,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B980A6CC270DC11A00AAF757 /* MovieCell.swift in Sources */,
+				B980A6D12711486C00AAF757 /* ResponseModel.swift in Sources */,
 				B93AA1B226FAD16B00AE3DC3 /* MainViewController.swift in Sources */,
 				B93AA1E126FAD39E00AE3DC3 /* MovieListViewController.swift in Sources */,
 				B93AA1AE26FAD16B00AE3DC3 /* AppDelegate.swift in Sources */,
 				B93AA1B826FAD16B00AE3DC3 /* Movie_list.xcdatamodeld in Sources */,
 				B93AA1E326FAD42500AE3DC3 /* MovieDetailViewController.swift in Sources */,
-				B980A6CF270DCD6200AAF757 /* Movie.swift in Sources */,
 				B93AA1B026FAD16B00AE3DC3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
